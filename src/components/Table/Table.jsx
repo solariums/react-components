@@ -682,9 +682,9 @@ class Table extends Component {
                         prefixCls={prefixCls}
                         data={dataSource}
                         columns={columns}
-                        onRow={record => {
+                        onRow={(record, key) => {
                             return {
-                                ...onRow(record),
+                                ...onRow(record, key),
                                 record,
                                 contextMenu
                             };
